@@ -54,12 +54,12 @@ function generateCssVarsWithFormat(name: string, scale: Record<string, string>, 
 
 type SnippetsProps = Props & { themeMode?: 'dark' | 'light' };
 
-export default function SnippetsAccordion({ cssVars, twCfg, scss, theme, themeMode = 'dark' }: SnippetsProps) {
+export default function SnippetsAccordion({ twCfg, scss, theme, themeMode = 'dark' }: SnippetsProps) {
     const [open, setOpen] = useState(false);
     const [cssFormat, setCssFormat] = useState<ColorFormat>('hex');
 
     const isDark = themeMode === 'dark';
-    const brand = theme?.scale ?? {};
+    const brand = useMemo(() => theme?.scale ?? {}, [theme?.scale]);
     const token = theme?.token ?? "brand";
     const c500 = brand["500"] ?? "#7DD3FC";
     const c600 = brand["600"] ?? "#38BDF8";
@@ -136,8 +136,8 @@ export default function SnippetsAccordion({ cssVars, twCfg, scss, theme, themeMo
                                         key={fmt}
                                         onClick={() => setCssFormat(fmt)}
                                         className={`px-2 py-1 text-[10px] uppercase font-mono rounded transition-colors ${cssFormat === fmt
-                                                ? 'text-zinc-100'
-                                                : 'text-zinc-500 hover:text-zinc-300'
+                                            ? 'text-zinc-100'
+                                            : 'text-zinc-500 hover:text-zinc-300'
                                             }`}
                                         style={cssFormat === fmt ? {
                                             background: `${c700}33`,

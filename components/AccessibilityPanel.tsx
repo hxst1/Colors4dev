@@ -10,7 +10,7 @@ type Props = {
     theme?: 'dark' | 'light';
 };
 
-export default function AccessibilityPanel({ token, scale, crWhite, crBlack, theme = 'dark' }: Props) {
+export default function AccessibilityPanel({ token, scale, crWhite, theme = 'dark' }: Props) {
     const isDark = theme === 'dark';
     const white = { r: 255, g: 255, b: 255 };
     const black = { r: 0, g: 0, b: 0 };
@@ -26,8 +26,8 @@ export default function AccessibilityPanel({ token, scale, crWhite, crBlack, the
 
     return (
         <div className={`border rounded-2xl p-4 ${isDark
-                ? 'bg-zinc-900/60 border-zinc-800'
-                : 'bg-white border-zinc-200'
+            ? 'bg-zinc-900/60 border-zinc-800'
+            : 'bg-white border-zinc-200'
             }`}>
             <h2 className="text-sm font-semibold mb-3">
                 Accessibility (contrast vs {token}-500)
@@ -46,18 +46,18 @@ export default function AccessibilityPanel({ token, scale, crWhite, crBlack, the
                         <span className="text-xs">White: {crWhite.toFixed(2)}:1</span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crWhite, 'AA')
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-red-600 text-white'
+                                ? 'bg-green-600 text-white'
+                                : 'bg-red-600 text-white'
                                 }`}
                         >
                             AA
                         </span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crWhite, 'AAA')
-                                    ? 'bg-green-600 text-white'
-                                    : isDark
-                                        ? 'bg-zinc-800 text-zinc-400'
-                                        : 'bg-zinc-200 text-zinc-500'
+                                ? 'bg-green-600 text-white'
+                                : isDark
+                                    ? 'bg-zinc-800 text-zinc-400'
+                                    : 'bg-zinc-200 text-zinc-500'
                                 }`}
                         >
                             AAA
@@ -68,8 +68,8 @@ export default function AccessibilityPanel({ token, scale, crWhite, crBlack, the
                 {/* On white */}
                 <div
                     className={`flex items-center justify-between p-3 rounded-lg border ${isDark
-                            ? 'border-zinc-800 bg-white text-zinc-900'
-                            : 'border-zinc-300 bg-white text-zinc-900'
+                        ? 'border-zinc-800 bg-white text-zinc-900'
+                        : 'border-zinc-300 bg-white text-zinc-900'
                         }`}
                 >
                     <div className="text-sm">
@@ -79,16 +79,16 @@ export default function AccessibilityPanel({ token, scale, crWhite, crBlack, the
                         <span className="text-xs">{crOnWhite.toFixed(2)}:1</span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crOnWhite, 'AA')
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-red-600 text-white'
+                                ? 'bg-green-600 text-white'
+                                : 'bg-red-600 text-white'
                                 }`}
                         >
                             AA
                         </span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crOnWhite, 'AAA')
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-zinc-200 text-zinc-500'
+                                ? 'bg-green-600 text-white'
+                                : 'bg-zinc-200 text-zinc-500'
                                 }`}
                         >
                             AAA
@@ -107,16 +107,16 @@ export default function AccessibilityPanel({ token, scale, crWhite, crBlack, the
                         <span className="text-xs">{crOnBlack.toFixed(2)}:1</span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crOnBlack, 'AA')
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-red-600 text-white'
+                                ? 'bg-green-600 text-white'
+                                : 'bg-red-600 text-white'
                                 }`}
                         >
                             AA
                         </span>
                         <span
                             className={`px-2 py-0.5 rounded-full text-xs font-medium ${getAAStatus(crOnBlack, 'AAA')
-                                    ? 'bg-green-600 text-white'
-                                    : 'bg-zinc-800 text-zinc-400'
+                                ? 'bg-green-600 text-white'
+                                : 'bg-zinc-800 text-zinc-400'
                                 }`}
                         >
                             AAA
