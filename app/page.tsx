@@ -14,7 +14,7 @@ const BLACK = { r: 0, g: 0, b: 0 };
 type Theme = 'dark' | 'light';
 
 export default function Page() {
-  const [base, setBase] = useState<string>("#826EE7");
+  const [base, setBase] = useState<string>("#FFFFFF");
   const [token, setToken] = useState<string>("brand");
   const [theme, setTheme] = useState<Theme>('dark');
 
@@ -28,7 +28,7 @@ export default function Page() {
     document.documentElement.classList.toggle('light', theme === 'light');
   }, [theme]);
 
-  const baseHex = useMemo(() => parseColor(base) ?? "#826EE7", [base]);
+  const baseHex = useMemo(() => parseColor(base) ?? "#FFFFFF", [base]);
   const scale = useMemo(() => buildScale(baseHex), [baseHex]);
 
   const c500 = hexToRgb(scale["500"]);
@@ -47,7 +47,7 @@ export default function Page() {
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Header */}
         <header className="mb-8 flex items-center justify-between">
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">Colors4me</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight uppercase">Colors 4 dev</h1>
           <div className="flex items-center gap-3">
             <button
               onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')}

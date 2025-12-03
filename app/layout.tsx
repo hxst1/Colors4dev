@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Colors4Me",
-  description: "An accessible color palette generator for developers. Create 50–900 scales from a base color and get copy-ready snippets for CSS, Tailwind, and SCSS, with live preview and theme auto-tinted to your color.",
+  title: "COLORS 4 DEV",
+  description: "A color tool for developers and designers, generating accessible color scales and palettes.",
 };
 
 export default function RootLayout({

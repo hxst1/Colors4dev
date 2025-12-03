@@ -28,11 +28,11 @@ export default function Controls({ base, setBase, token, setToken, baseHex }: Pr
 
     const getPlaceholder = () => {
         switch (format) {
-            case 'hex': return '#826EE7';
+            case 'hex': return '#FFFFFF';
             case 'rgb': return 'rgb(130, 110, 231)';
             case 'hsl': return 'hsl(249, 71%, 67%)';
             case 'oklch': return 'oklch(0.598, 0.156, 283.5)';
-            default: return '#826EE7';
+            default: return '#FFFFFF';
         }
     };
 
@@ -50,8 +50,8 @@ export default function Controls({ base, setBase, token, setToken, baseHex }: Pr
                                 key={fmt}
                                 onClick={() => setFormat(fmt)}
                                 className={`px-2 py-1 text-[10px] uppercase font-mono rounded transition-colors ${format === fmt
-                                        ? 'bg-[var(--text-primary)] text-[var(--bg-primary)]'
-                                        : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--interactive-hover)] hover:text-[var(--text-primary)]'
+                                    ? 'bg-[var(--text-primary)] text-[var(--bg-primary)]'
+                                    : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:bg-[var(--interactive-hover)] hover:text-[var(--text-primary)]'
                                     }`}
                                 aria-pressed={format === fmt}
                                 aria-label={`${fmt.toUpperCase()} format`}
