@@ -1,0 +1,21 @@
+{
+  "name": "Colors4dev — Color Scale Generator",
+  "short_name": "Colors4dev",
+  "description": "Generate accessible color palettes and scales for developers. Export to CSS, Tailwind & SCSS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
